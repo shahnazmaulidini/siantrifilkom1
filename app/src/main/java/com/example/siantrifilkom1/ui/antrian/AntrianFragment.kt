@@ -1,4 +1,4 @@
-package com.example.siantrifilkom1.ui
+package com.example.siantrifilkom1.ui.antrian
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.siantrifilkom1.databinding.FragmentAntrianBinding
-import com.example.siantrifilkom1.ui.antrian.AntrianAdapter
 import com.example.siantrifilkom1.util.ModelAntrian
 import com.example.siantrifilkom1.util.SharedPref
 import com.google.firebase.database.DataSnapshot
