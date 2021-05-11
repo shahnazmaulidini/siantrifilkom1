@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "227033781000",
+    "firebase_url": "https://databasekotlin-default-rtdb.firebaseio.com",
+    "project_id": "databasekotlin",
+    "storage_bucket": "databasekotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227033781000:android:da57d53d902222a5a912bd",
+        "android_client_info": {
+          "package_name": "com.example.siantrifilkom1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "227033781000-9mqt780ajkjo1577td8phmjp3m2012ss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsCmnl5iSuAa7fa1THSG0o8SqSL5DKMW4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "227033781000-9mqt780ajkjo1577td8phmjp3m2012ss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

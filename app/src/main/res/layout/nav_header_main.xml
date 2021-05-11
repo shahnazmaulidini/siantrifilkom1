@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ID_Navheader_Imgfoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:contentDescription="Hallo"
+        android:paddingTop="10dp"
+        android:src="@drawable/muslimah"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="4dp" />
+
+
+    <TextView
+        android:id="@+id/ID_Navheader_TxtNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingTop="10dp"
+        android:text="Haiii"
+
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#501705"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/ID_Navheader_TxtNim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Welcome"
+        android:textAlignment="center"
+        android:textColor="#1C1616" />
+</LinearLayout>

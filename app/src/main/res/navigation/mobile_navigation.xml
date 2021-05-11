@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.siantrifilkom1.ui.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_pengajuanFragment"
+            app:destination="@id/pengajuanFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_welcomePageFragment"
+            app:destination="@id/welcomePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.siantrifilkom1.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/antrianFragment"
+        android:name="com.example.siantrifilkom1.ui.AntrianFragment"
+        android:label="fragment_antrian"
+        tools:layout="@layout/fragment_antrian" >
+        <action
+            android:id="@+id/action_antrianFragment_to_detailAntrianFragment"
+            app:destination="@id/detailAntrianFragment" />
+        <action
+            android:id="@+id/action_antrianFragment_to_notifikasiFragment"
+            app:destination="@id/notifikasiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomePageFragment"
+        android:name="com.example.siantrifilkom1.ui.login.WelcomePageFragment"
+        android:label="fragment_welcome_page"
+        tools:layout="@layout/fragment_welcome_page" >
+        <action
+            android:id="@+id/action_welcomePageFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_welcomePageFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notifikasiFragment"
+        android:name="com.example.siantrifilkom1.ui.notif.NotifikasiFragment"
+        android:label="fragment_notifikasi"
+        tools:layout="@layout/fragment_notifikasi" />
+    <fragment
+        android:id="@+id/pengajuanFragment"
+        android:name="com.example.siantrifilkom1.ui.pengajuan.PengajuanFragment"
+        android:label="fragment_pengajuan"
+        tools:layout="@layout/fragment_pengajuan" >
+        <action
+            android:id="@+id/action_pengajuanFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_pengajuanFragment_to_antrianFragment"
+            app:destination="@id/antrianFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailAntrianFragment"
+        android:name="com.example.siantrifilkom1.ui.antrian.DetailAntrianFragment"
+        android:label="fragment_detail_antrian"
+        tools:layout="@layout/fragment_detail_antrian" >
+        <action
+            android:id="@+id/action_detailAntrianFragment_to_scannerQrFragment"
+            app:destination="@id/scannerQrFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scannerQrFragment"
+        android:name="com.example.siantrifilkom1.ScannerQrFragment"
+        android:label="fragment_scanner_qr"
+        tools:layout="@layout/fragment_scanner_qr" />
+</navigation>
