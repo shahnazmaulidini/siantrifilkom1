@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/antrianFragment"
-        android:name="com.example.siantrifilkom1.ui.AntrianFragment"
+        android:name="com.example.siantrifilkom1.ui.antrian.AntrianFragment"
         android:label="fragment_antrian"
         tools:layout="@layout/fragment_antrian" >
         <action
@@ -75,6 +75,9 @@
         <action
             android:id="@+id/action_detailAntrianFragment_to_scannerQrFragment"
             app:destination="@id/scannerQrFragment" />
+        <action
+            android:id="@+id/action_detailAntrianFragment_to_antrianFragment"
+            app:destination="@id/antrianFragment" />
     </fragment>
     <fragment
         android:id="@+id/scannerQrFragment"
