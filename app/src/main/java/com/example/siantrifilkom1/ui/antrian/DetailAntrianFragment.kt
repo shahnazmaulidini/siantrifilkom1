@@ -26,6 +26,8 @@ class DetailAntrianFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentDetailAntrianBinding.inflate(layoutInflater, container, false)
+        binding.IDDetailAntrianPopup.IDPopupCardView.visibility = View.GONE
+        binding.IDDetailAntrianPopup.IDPopupLinear.visibility = View.GONE
         return binding.root
     }
 
@@ -48,6 +50,7 @@ class DetailAntrianFragment : Fragment() {
 
                                 key = it.key.toString()
                             }
+
                             binding.IDDetailAntrianBtnSelesai.setOnClickListener {
                                 Toast.makeText(requireContext(), "key = "+key, Toast.LENGTH_SHORT).show()
                                 val bundle = Bundle()
@@ -56,6 +59,21 @@ class DetailAntrianFragment : Fragment() {
 
                                 findNavController().navigate(
                                     R.id.action_detailAntrianFragment_to_scannerQrFragment,
+                                    bundle
+                                )
+                            }
+
+                            binding.IDDetailAntrianPopup.IDDetailAntrianBtnYa.setOnClickListener {
+                                binding.IDDetailAntrianPopup.IDPopupCardView.visibility = View.GONE
+                                binding.IDDetailAntrianPopup.IDPopupLinear.visibility = View.GONE
+                                FirebaseDatabase.getInstance().reference.child("SistemAntrian").child("Antrian").child(currentDateNow).child(key).child("status").setValue("Batal")
+
+                                val bundle = Bundle()
+                                bundle.putString("nomorAntrian", data.getString("nomorAntrian"))
+                                bundle.putString("keyAntrian", key)
+
+                                findNavController().navigate(
+                                    R.id.action_detailAntrianFragment_to_antrianFragment,
                                     bundle
                                 )
                             }
@@ -80,6 +98,17 @@ class DetailAntrianFragment : Fragment() {
 
                 }
             })
+
+        binding.IDDetailAntrianBtnBatal.setOnClickListener {
+            binding.IDDetailAntrianPopup.IDPopupCardView.visibility = View.VISIBLE
+            binding.IDDetailAntrianPopup.IDPopupLinear.visibility = View.VISIBLE
+        }
+
+        binding.IDDetailAntrianPopup.IDDetailAntrianBtnTidak.setOnClickListener {
+            binding.IDDetailAntrianPopup.IDPopupCardView.visibility = View.GONE
+            binding.IDDetailAntrianPopup.IDPopupLinear.visibility = View.GONE
+        }
+
 
     }
 }
