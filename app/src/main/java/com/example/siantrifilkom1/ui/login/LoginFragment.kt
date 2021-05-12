@@ -54,6 +54,7 @@ class LoginFragment : Fragment() {
                                         Toast.LENGTH_SHORT
                                     ).show()
 
+                                    //menyimpan data login mahasiswa
                                     val myPreference = SharedPref(requireContext())
                                     val data = ModelAuth(data.NIM,data.PASSWORD,data.Nama)
                                     myPreference.setData(data)
