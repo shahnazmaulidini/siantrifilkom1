@@ -16,6 +16,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.RemoteViews
 import android.widget.Toast
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.siantrifilkom1.MainActivity
 import com.example.siantrifilkom1.R
@@ -89,7 +90,8 @@ class PengajuanFragment : Fragment() {
             val modelAntrian = ModelAntrian("Aktif", nim, nama, subject, "P$antrian", time)
             FirebaseDatabase.getInstance().reference.child("SistemAntrian").child("Antrian")
                 .child(currentDate).push().setValue(modelAntrian).addOnSuccessListener {
-                    findNavController().navigate(R.id.action_pengajuanFragment_to_antrianFragment)
+                        val navOption = NavOptions.Builder().setPopUpTo(R.id.dashboardFragment,true).setExitAnim(R.anim.fragment_close_exit).build()
+                        findNavController().navigate(R.id.action_pengajuanFragment_to_antrianFragment,null,navOption)
                     notif()
                 }
         } else {
