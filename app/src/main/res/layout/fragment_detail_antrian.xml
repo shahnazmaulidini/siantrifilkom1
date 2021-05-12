@@ -97,6 +97,8 @@
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <include layout="@layout/popup_batal_antrian"
-        android:id="@+id/ID_DetailAntrian_Popup"></include>
+    <include
+        android:id="@+id/ID_DetailAntrian_Popup"
+        layout="@layout/popup_batal_antrian"
+        android:visibility="visible"></include>
 </androidx.constraintlayout.widget.ConstraintLayout>

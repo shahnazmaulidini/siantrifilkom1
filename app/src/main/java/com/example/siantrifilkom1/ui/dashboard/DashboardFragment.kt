@@ -27,24 +27,17 @@ class DashboardFragment : Fragment() {
         return binding.root
     }
 
-    override fun onResume() {
-        super.onResume()
-
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val myPreference = SharedPref(requireContext())
+        //mengecek data login apakah sudah sesuai dg di sharedpref
         if (myPreference.getData().NIM == "" && myPreference.getData().PASSWORD == "") {
             val navOption = NavOptions.Builder().setPopUpTo(R.id.loginFragment,true).build()
             findNavController().navigate(R.id.action_dashboardFragment_to_welcomePageFragment,null,navOption)
         }
 
-
-        binding.IDDashboardImg.setOnClickListener {
-
-        }
     }
 
 
