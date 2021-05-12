@@ -55,6 +55,7 @@ class PengajuanFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val myPreference = SharedPref(requireContext())
+        //menampilkan data nim nama sesuai login
         binding.IDPengajuanEdtNIM.setText(myPreference.getData().NIM)
         binding.IDPengajuanEdtName.setText(myPreference.getData().Nama)
 
