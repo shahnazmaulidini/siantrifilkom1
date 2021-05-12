@@ -83,5 +83,9 @@
         android:id="@+id/scannerQrFragment"
         android:name="com.example.siantrifilkom1.ScannerQrFragment"
         android:label="fragment_scanner_qr"
-        tools:layout="@layout/fragment_scanner_qr" />
+        tools:layout="@layout/fragment_scanner_qr" >
+        <action
+            android:id="@+id/action_scannerQrFragment_to_antrianFragment"
+            app:destination="@id/antrianFragment" />
+    </fragment>
 </navigation>
