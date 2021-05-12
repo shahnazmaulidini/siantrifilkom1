@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.siantrifilkom1.R
 import com.example.siantrifilkom1.databinding.FragmentDetailAntrianBinding
@@ -72,10 +73,9 @@ class DetailAntrianFragment : Fragment() {
                                 bundle.putString("nomorAntrian", data.getString("nomorAntrian"))
                                 bundle.putString("keyAntrian", key)
 
-                                findNavController().navigate(
-                                    R.id.action_detailAntrianFragment_to_antrianFragment,
-                                    bundle
-                                )
+
+                                val navOption = NavOptions.Builder().setPopUpTo(R.id.antrianFragment,true).build()
+                                findNavController().navigate(R.id.action_detailAntrianFragment_to_antrianFragment,null,navOption)
                             }
                         }
 
